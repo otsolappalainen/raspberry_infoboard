@@ -1,0 +1,266 @@
+:root {
+    --bus-font-scale: 1;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+    background: #0f0f0f;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    gap: 4px;
+}
+
+.control-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-value {
+    font-size: 0.9rem;
+    color: #bbb;
+    min-width: 60px;
+}
+
+.controls input[type="range"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 180px;
+    height: 6px;
+    border-radius: 3px;
+    background: #2a2a2a;
+    outline: none;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #4da6ff;
+    cursor: pointer;
+}
+
+.controls input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #4da6ff;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.section {
+    background: #0a0a0a;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+#clock-container {
+    flex: 0 0 auto;
+}
+
+#electricity {
+    flex: 2;
+    overflow: hidden;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#transport {
+    flex: 3;
+    overflow: hidden;
+}
+
+#weather {
+    flex: 2;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Electricity */
+.elec-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.main-value {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+}
+
+.unit {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-left: 5px;
+}
+
+.graph-container {
+    width: 100%;
+    flex: 1;
+    min-height: 100px;
+    background: #111;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Weather */
+.weather-current {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pop-value {
+    font-size: 1.2rem;
+    color: #4da6ff;
+}
+
+.weather-graph {
+    padding: 8px;
+}
+
+.weather-graph canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Clock */
+#clock-container {
+    text-align: right;
+    background: #0a0a0a;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#clock {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+}
+
+#date {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* Bus Schedule */
+#bus-list {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+#bus-list::-webkit-scrollbar {
+    display: none;
+}
+
+.stop-group {
+    margin-bottom: 10px;
+}
+
+.stop-name {
+    font-size: 1rem;
+    color: #4CAF50;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1px;
+    text-transform: uppercase;
+}
+
+.bus-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+    background: #111;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.bus-route {
+    font-weight: bold;
+    color: #fff;
+    width: 50px;
+    flex-shrink: 0;
+    font-size: calc(1.2rem * var(--bus-font-scale));
+}
+
+.bus-dest {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+.bus-time {
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+    font-size: calc(1.2rem * var(--bus-font-scale));
+}
+
+.realtime {
+    color: #4CAF50;
+}
+
+.scheduled {
+    color: #ccc;
+}

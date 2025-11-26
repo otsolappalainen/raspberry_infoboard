@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raspberry Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+    <div class="container">
+        <!-- 1. Clock -->
+        <div id="clock-container">
+            <div id="clock">--:--:--</div>
+            <div id="date">--.--.----</div>
+        </div>
+
+        <div class="divider-h"></div>
+
+        <!-- 2. Electricity -->
+        <div id="electricity" class="section">
+            <div class="content">
+                <div class="elec-header">
+                    <div class="main-value"><span id="elec-current">--</span> <span class="unit">c/kWh</span></div>
+                </div>
+                <div class="graph-container">
+                    <canvas id="elec-graph"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider-h"></div>
+
+        <!-- 3. Transport -->
+        <div id="transport" class="section">
+            <div class="content" id="bus-list">
+                <!-- Bus items will be injected here -->
+                <div class="loading">Loading...</div>
+            </div>
+        </div>
+
+        <div class="divider-h"></div>
+
+        <!-- 4. Weather -->
+        <div id="weather" class="section">
+            <div class="content">
+                <div class="weather-current">
+                    <span id="weather-temp">--</span> <span class="unit">°C</span>
+                    <span id="weather-pop" class="pop-value"></span>
+                    <span id="weather-symbol">--</span>
+                </div>
+                <div class="graph-container weather-graph">
+                    <canvas id="weather-graph"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

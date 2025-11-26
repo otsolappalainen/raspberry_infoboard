@@ -1,0 +1,22 @@
+# Secrets - DO NOT COMMIT
+secrets.txt
+config.json
+# secrets.txt.example
+
+# Binaries
+rasp_info
+rasp_info.exe
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# dev and debug
+mock.js
+mock.html
