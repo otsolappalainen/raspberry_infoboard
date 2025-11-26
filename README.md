@@ -6,6 +6,7 @@ A Go-based dashboard service mainly for Raspberry Pi based system that displays:
 - **Weather data** from FMI (temperature, precipitation probability, 24h forecast)
 - **Real-time clock**
 
+![Raspberry Pi Dashboard](IMG_6303.jpg)
 
 ## Setup
 
@@ -68,6 +69,3 @@ If you prefer to set up everything manually:
   ```
 - **Manual Start**: You can try running `./start-dashboard.sh` manually to see if Chromium launches correctly.
 
-## License
-
-MIT
