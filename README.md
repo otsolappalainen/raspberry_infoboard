@@ -9,7 +9,8 @@ A Go-based dashboard service mainly for Raspberry Pi based system that displays:
 
 ## Setup
 
-###Hardware###
+### Hardware ###
+
 Designed for **Raspberry Pi** with **Raspberry Pi Touch Display 2 7"**
 
 ### Prerequisites
